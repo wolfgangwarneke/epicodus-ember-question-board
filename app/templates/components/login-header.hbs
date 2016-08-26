@@ -1,0 +1,6 @@
+{{#if logIn.loggedIn}}
+You are logged in as USER.
+{{else}}
+{{#link-to 'login'}}Log In?{{/link-to}} or
+{{#link-to 'signup'}}Sign Up?{{/link-to}}
+{{/if}}
