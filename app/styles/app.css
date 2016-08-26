@@ -2,3 +2,18 @@ input, textarea, button {
   background-color: pink;
   display: block;
 }
+
+.qListTile {
+  width: 80%;
+  margin: 10px;
+  border-top: 2px solid black;
+}
+
+.qListTile div {
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.qListTile div {
+  padding: 4px;
+}
