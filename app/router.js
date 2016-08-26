@@ -13,6 +13,8 @@ Router.map(function() {
   this.route('login');
   this.route('users');
   this.route('signout');
+  this.route('ask');
+  this.route('questions');
 });
 
 export default Router;
