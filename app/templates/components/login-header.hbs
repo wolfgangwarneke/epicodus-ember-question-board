@@ -1,5 +1,6 @@
 {{#if logIn.loggedIn}}
 You are logged in as {{logIn.loggedInUser.username}}.
+{{#link-to 'signout'}}Sign out{{/link-to}}
 {{else}}
 {{#link-to 'login'}}Log In?{{/link-to}} or
 {{#link-to 'signup'}}Sign Up?{{/link-to}}
