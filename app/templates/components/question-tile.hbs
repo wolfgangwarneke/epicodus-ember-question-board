@@ -1,1 +1,5 @@
-{{yield}}
+<div>
+  <h2>{{question.header}}</h2>
+  <h4 {{action "testLog" question}}>asked by {{question.user.username}}</h4>
+  <p>{{contentPreview}}</p>
+</div>

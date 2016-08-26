@@ -2,9 +2,9 @@
   <h4>What's your new question?</h4>
   <label for="header">Question header</label>
   {{input value=header id="header"}}
-  <label for="main">Details (further explanation)</label>
-  {{input value=main id="main"}}
-  <button {{action "askQuestion" logIn.loggedInUser}}>Ask Away</button>
+  <label for="content">Details (further explanation)</label>
+  {{input value=content id="content"}}
+  <button {{action "askQuestion"}}>Ask Away</button>
 {{else}}
   <h3>You are not {{#link-to 'login'}}logged in{{/link-to}}</h3>
 {{/if}}
