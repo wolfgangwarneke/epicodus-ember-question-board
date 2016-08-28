@@ -4,7 +4,9 @@
   </div>
   <div class="qListMiddle">
     <span class="qListTimestamp">{{question.timestamp}}</span>
-    <span class="qListAskedBy">asked by <span class="qListUser">{{question.user.username}}</span></span>
+    <span class="qListAskedBy">asked by <span class="qListUser">{{question.user.username}}</span>
+      {{#if loggedInUserMatch}}<button {{action "edit" question}}>Edit</button><button {{action "delete" question}}>Delete</button>{{/if}}
+    </span>
   </div>
   <div class="qListLower">
     <span class="qListPreview">{{contentPreview}}</span>
