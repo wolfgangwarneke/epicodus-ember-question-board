@@ -1,0 +1,15 @@
+<div>
+  <div>
+    {{question.header}}
+  </div>
+  <div>
+    <span>{{question.timestamp}}</span>
+    <span>{{question.user.username}}</span>
+    {{#if loggedInUserMatch}}
+      edit and delete
+    {{/if}}
+  </div>
+  <div>
+    {{question.content}}
+  </div>
+</div>
