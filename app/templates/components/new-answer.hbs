@@ -1,4 +1,7 @@
 {{#if logIn.loggedIn}}
+{{question.user.username}}'s question:
+{{question.header}}
+Go ahead and answer this, {{logIn.loggedInUser.first_name}}!
   {{input value=answer}}
   <button {{action 'answerQuestion'}}>Submit answer</button>
 {{else}}

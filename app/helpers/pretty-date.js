@@ -3,7 +3,7 @@ import Ember from 'ember';
 export function prettyDate(params) {
   var uglyDate = params[0];
   console.log(uglyDate);
-  var day = parseInt(uglyDate.slice(8, 10));
+  var day = parseInt(uglyDate.slice(8, 10)) - 1;
   var month = parseInt(uglyDate.slice(5, 7)) - 1;
   console.log("Month: " + month);
   var year = parseInt(uglyDate.slice(0, 4));

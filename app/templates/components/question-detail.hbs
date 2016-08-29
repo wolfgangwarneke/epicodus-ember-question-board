@@ -2,21 +2,33 @@
   <div>
     {{question.header}}
   </div>
-  <div>
-    <span>{{pretty-date question.timestamp}}</span>
-    <span>{{question.user.username}}</span>
-    {{#if logIn.loggedIn}}
-      {{#link-to 'answer' question.id}}
-        <span class="answerButton">Answer this!</span>
-      {{/link-to}}
-    {{/if}}
-    {{#if loggedInUserMatch}}
-      edit and <span class="deleteButton" {{action "deleteQuestion" question}}>delete</span>
-    {{/if}}
-  </div>
-  <div>
-    {{question.content}}
-  </div>
+  {{#unless editing}}
+    <div>
+      <span>{{pretty-date question.timestamp}}</span>
+      <span>{{question.user.username}}</span>
+      {{#if logIn.loggedIn}}
+        {{#link-to 'answer' question.id}}
+          <span class="answerButton">Answer this!</span>
+        {{/link-to}}
+      {{/if}}
+      {{#if loggedInUserMatch}}
+        <span class="editButton" {{action "edit"}}>Edit</span>
+        <span class="deleteButton" {{action "deleteQuestion" question}}>Delete</span>
+      {{/if}}
+    </div>
+    <div>
+      {{question.content}}
+    </div>
+  {{else}}
+    <div>
+      {{input value=question.header}}
+        <span class="editButton" {{action "updateQuestion" question}}>Save</span>
+        <span class="deleteButton" {{action "deleteQuestion" question}}>Delete</span>
+    </div>
+    <div>
+      {{textarea value=question.content}}
+    </div>
+  {{/unless}}
   {{#each question.answers as |answer|}}
     {{answer-tile answer=answer}}
   {{/each}}

@@ -13,9 +13,17 @@ export default Ember.Component.extend({
       return false;
     }
   }),
+  editing: false,
   actions: {
     deleteQuestion(question) {
       this.sendAction('deleteQuestion', question);
+    },
+    edit() {
+      this.set('editing', true);
+    },
+    updateQuestion(question) {
+      this.set('editing', false);
+      this.sendAction('updateQuestion', question);
     }
   }
 });
