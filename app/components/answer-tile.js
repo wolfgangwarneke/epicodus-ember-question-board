@@ -5,8 +5,6 @@ export default Ember.Component.extend({
   loggedInUserMatch: Ember.computed('logIn.loggedInUser', 'answer.user', function() {
     var loggedInUser = this.get('logIn.loggedInUser.id');
     var answersUser = this.get('answer.user.id');
-    console.log("Logged in user: " + loggedInUser);
-    console.log("answersUser: " + answersUser);
     if (this.get('logIn.loggedInUser.id') === this.get('answer.user.id')) {
       return true;
     } else {
