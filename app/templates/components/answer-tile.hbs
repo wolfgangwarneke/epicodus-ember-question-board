@@ -1,2 +1,12 @@
-{{answer.answer}}
+{{#unless editing}}
+  {{answer.answer}}
+{{else}}
+  {{input value=answer.answer}}
+  <span class="saveButton" {{action 'updateAnswer' answer}}>Save</span>
+{{/unless}}
 by {{answer.user.username}}
+{{#if loggedInUserMatch}}
+  {{#unless editing}}
+    <span class="editButton" {{action 'edit'}}>Edit</span>
+  {{/unless}}
+{{/if}}
