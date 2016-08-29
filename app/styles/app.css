@@ -1,3 +1,47 @@
+/*#FFF3F3, #FFDDDD, #F8BBBB, #D38282, #AF5050*/
+
+body {
+  background-color: #FDD;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #F8BBBB;
+}
+
+header h1 {
+  font-family: fantasy;
+  background-color: #AF5050;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  background-color: #D38282;
+}
+
+nav li a {
+  font-variant: small-caps;
+  text-decoration: none;
+  color: #FFF3F3;
+}
+
+login-header a {
+  font-family: cursive, serif;
+  font-style: italic;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #FFF3F3;
+  padding: 8px;
+}
+
 input, textarea, button {
   background-color: pink;
   display: block;
@@ -12,8 +56,13 @@ input, textarea, button {
 .qListTile div {
   border-bottom: 1px solid black;
   border-left: 1px solid black;
+  padding: 4px;
 }
 
-.qListTile div {
-  padding: 4px;
+.qListTile a {
+  color: #D38282;
+}
+
+.qListUpper {
+  font-weight: bold;
 }
