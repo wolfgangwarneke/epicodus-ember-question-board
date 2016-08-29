@@ -1,0 +1,15 @@
+{{#if logIn.loggedIn}}
+  <h3>Welcome back, {{logIn.loggedInUser.first_name}}!</h3>
+  <h2>Got a question?  {{#link-to 'ask'}}Just ask.{{/link-to}}</h2>
+  <h4>Or {{#link-to 'questions'}}<em>check out some new questions to answer</em>{{/link-to}} since you've already answered {{logIn.loggedInUser.answers.length}} of them!</h4>
+  <h5>Your questions</h5>
+  <ul>
+  {{#each logIn.loggedInUser.questions as |question|}}
+    {{#link-to 'question' question.id}}<li>{{question.header}} <strong>{{question.answers.length}} answers</strong></li>{{/link-to}}
+  {{/each}}
+  </ul>
+{{else}}
+  <h3>Welcome!</h3>
+  <h2>Got a question?  {{#link-to 'signup'}}Sign up{{/link-to}}</h2>
+  <h4>Or {{#link-to 'login'}}<em>log in</em>{{/link-to}} if you're already with us!</h4>
+{{/if}}

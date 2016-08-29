@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     createUser(params){
       var newUser = this.store.createRecord('user', params);
       newUser.save();
-      this.transitionTo('index');
+      this.transitionTo('login');
     },
   }
 });
