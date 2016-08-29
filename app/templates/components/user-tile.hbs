@@ -1,0 +1,31 @@
+<div>
+  {{user.username}} - {{user.full_name}}
+  <span class="button" {{action 'toggleQuestions'}}>Questions ({{user.questions.length}})</span>
+  <span class="button" {{action 'toggleAnswers'}}>Answers ({{user.answers.length}})</span>
+</div>
+{{#if showQuestions}}
+  <div>
+    <ul>
+      {{#each user.questions as |question|}}
+        {{#link-to 'question' question.id}}
+          <li>{{question.header}}</li>
+        {{/link-to}}
+      {{/each}}
+    </ul>
+  </div>
+{{/if}}
+{{#if showAnswers}}
+  <div>
+    <ul>
+      {{#each user.answers as |answer|}}
+        {{#link-to 'question' answer.question.id}}
+          <li>Answered {{answer.question.header}}</li>
+        {{/link-to}}
+      {{/each}}
+    </ul>
+  </div>
+{{/if}}
+<div>
+  About:
+  {{user.bio}}
+</div>

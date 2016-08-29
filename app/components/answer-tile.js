@@ -22,6 +22,9 @@ export default Ember.Component.extend({
       var newAnswer = answer;
       newAnswer.save();
       this.set('editing', false);
+    },
+    deleteAnswer(answer) {
+      this.sendAction('deleteAnswer', answer);
     }
   }
 });

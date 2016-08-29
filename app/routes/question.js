@@ -17,6 +17,10 @@ export default Ember.Route.extend({
     updateQuestion(question) {
       question.save();
       this.transitionTo('question', question.id);
+    },
+    deleteAnswer(answer) {
+      answer.destroyRecord();
+      this.transitionTo('question', this.get('currentModel.id'));
     }
   }
 });

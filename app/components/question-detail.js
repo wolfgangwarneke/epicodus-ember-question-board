@@ -24,6 +24,9 @@ export default Ember.Component.extend({
     updateQuestion(question) {
       this.set('editing', false);
       this.sendAction('updateQuestion', question);
+    },
+    deleteAnswer(answer) {
+      this.sendAction('deleteAnswer', answer);
     }
   }
 });

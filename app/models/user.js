@@ -6,6 +6,11 @@ export default DS.Model.extend({
   email: DS.attr(),
   first_name: DS.attr(),
   last_name: DS.attr(),
+  full_name: Ember.computed('first_name', 'last_name', function() {
+    var firstName = this.get('first_name');
+    var lastName = this.get('last_name');
+    return firstName + " " + lastName;
+  }),
   bio: DS.attr(),
   member_since: DS.attr(),
   active: DS.attr(),

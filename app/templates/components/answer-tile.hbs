@@ -9,4 +9,5 @@ by {{answer.user.username}}
   {{#unless editing}}
     <span class="editButton" {{action 'edit'}}>Edit</span>
   {{/unless}}
+  <span class="deleteButton" {{action 'deleteAnswer' answer}}>Delete</span>
 {{/if}}
