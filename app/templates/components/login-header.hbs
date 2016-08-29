@@ -1,5 +1,5 @@
 {{#if logIn.loggedIn}}
-You are logged in as {{logIn.loggedInUser.username}}.
+You are logged in as <span class="user">{{logIn.loggedInUser.username}}</span>.
 {{#link-to 'signout'}}Sign out{{/link-to}}
 {{else}}
 {{#link-to 'login'}}Log In?{{/link-to}} or

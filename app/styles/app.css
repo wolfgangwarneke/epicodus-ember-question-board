@@ -5,11 +5,17 @@ body {
   font-family: sans-serif;
 }
 
+.user {
+  color: #BB0000;
+}
+
 header {
   background-color: #F8BBBB;
 }
 
 header h1 {
+  padding-left: 10px;
+  padding-top: 4px;
   font-family: fantasy;
   background-color: #AF5050;
 }
@@ -37,14 +43,39 @@ login-header a {
 }
 
 footer {
-  margin-top: 30px;
+  margin-top: 18px;
   background-color: #FFF3F3;
   padding: 8px;
+}
+
+.editButton, .deleteButton, .saveButton {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 1px;
+  background: #AF5050;
+}
+
+user div {
+  padding: 3px;
+  background-color: #C28383;
+}
+
+user div:last-child {
+  margin-bottom: 15px;
 }
 
 input, textarea, button {
   background-color: pink;
   display: block;
+}
+
+#form {
+  padding-left: 10%;
+}
+
+answer div {
+  background-color: #F8BBBB;
+  margin-left: 7%;
 }
 
 .qListTile {
@@ -60,7 +91,7 @@ input, textarea, button {
 }
 
 .qListTile a {
-  color: #D38282;
+  color: #A33232;
 }
 
 .qListUpper {

@@ -1,5 +1,5 @@
 <div>
-  {{user.username}} - {{user.full_name}}
+  <span class="user">{{user.username}}</span> - {{user.full_name}}
   <span class="button" {{action 'toggleQuestions'}}>Questions ({{user.questions.length}})</span>
   <span class="button" {{action 'toggleAnswers'}}>Answers ({{user.answers.length}})</span>
 </div>

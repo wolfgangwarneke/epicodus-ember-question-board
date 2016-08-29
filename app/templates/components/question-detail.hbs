@@ -1,11 +1,11 @@
-<div>
+<div class="qListTile">
   <div>
     {{question.header}}
   </div>
   {{#unless editing}}
     <div>
       <span>{{pretty-date question.timestamp}}</span>
-      <span>{{question.user.username}}</span>
+      <span class="user">{{question.user.username}}</span>
       {{#if logIn.loggedIn}}
         {{#link-to 'answer' question.id}}
           <span class="answerButton">Answer this!</span>
@@ -30,6 +30,6 @@
     </div>
   {{/unless}}
   {{#each question.answers as |answer|}}
-    {{answer-tile answer=answer deleteAnswer="deleteAnswer"}}
+    {{answer-tile answer=answer deleteAnswer="deleteAnswer" tagName="answer"}}
   {{/each}}
 </div>

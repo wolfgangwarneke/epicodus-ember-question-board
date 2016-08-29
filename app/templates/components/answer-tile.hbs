@@ -1,13 +1,15 @@
-{{#unless editing}}
-  {{answer.answer}}
-{{else}}
-  {{input value=answer.answer}}
-  <span class="saveButton" {{action 'updateAnswer' answer}}>Save</span>
-{{/unless}}
-by {{answer.user.username}}
-{{#if loggedInUserMatch}}
+<div>
   {{#unless editing}}
-    <span class="editButton" {{action 'edit'}}>Edit</span>
+    {{answer.answer}}
+  {{else}}
+    {{input value=answer.answer}}
+    <span class="saveButton" {{action 'updateAnswer' answer}}>Save</span>
   {{/unless}}
-  <span class="deleteButton" {{action 'deleteAnswer' answer}}>Delete</span>
-{{/if}}
+  by <span class="user">{{answer.user.username}}</span>
+  {{#if loggedInUserMatch}}
+    {{#unless editing}}
+      <span class="editButton" {{action 'edit'}}>Edit</span>
+    {{/unless}}
+    <span class="deleteButton" {{action 'deleteAnswer' answer}}>Delete</span>
+  {{/if}}
+</div>
