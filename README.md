@@ -1,53 +1,37 @@
-# First-question-board
+# _Questions Board_
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+#### _Is it a question board?  Yes. Yes it is. (August the 29th, 2016)_
 
-## Prerequisites
+#### By _**Wolfgang Warneke**_
 
-You will need the following things properly installed on your computer.
+## Description
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+_This is my question board built with Ember.  It features a full user login system and full CRUD functionality for both questions and answers.  The Firebase database holds three objects (users, questions, and answers) which are fully relationally integrated._
 
-## Installation
+## Setup/Installation Requirements
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+* _Do you have Ember installed on your machine???_
+* _Clone this project._
+* _'npm install'_
+* _'bower install'_
+* _'ember s'_
+* _Go to 'http:localhost:4200' in yer browser of choice!_
 
-## Running / Development
+_Check it out.  At time of writing, there is a strong "The Mighty Boosh" theme going on in the question/answer database.  Feel free to continue as such if so inclined._
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+## Known Bugs
 
-### Code Generators
+_No known bugs at this time._
 
-Make use of the many generators for code, try `ember help generate` for more details
+## Support and contact details
 
-### Running Tests
+_DM me on Instagram.  @wolfgangwarneke_
+_Tweet at me!  @wolfgangwarneke_
 
-* `ember test`
-* `ember test --server`
+## Technologies Used
 
-### Building
+_Ember JS!_
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+### License
 
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+Copyright (c) 2016 **Wolfgang Warneke**
