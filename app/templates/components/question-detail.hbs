@@ -3,7 +3,7 @@
     {{question.header}}
   </div>
   <div>
-    <span>{{question.timestamp}}</span>
+    <span>{{pretty-date question.timestamp}}</span>
     <span>{{question.user.username}}</span>
     {{#if logIn.loggedIn}}
       {{#link-to 'answer' question.id}}
