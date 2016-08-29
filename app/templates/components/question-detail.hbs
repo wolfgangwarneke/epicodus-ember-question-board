@@ -11,7 +11,7 @@
       {{/link-to}}
     {{/if}}
     {{#if loggedInUserMatch}}
-      edit and delete
+      edit and <span class="deleteButton" {{action "deleteQuestion" question}}>delete</span>
     {{/if}}
   </div>
   <div>

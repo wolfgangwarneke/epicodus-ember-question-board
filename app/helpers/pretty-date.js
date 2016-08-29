@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export function cityPopularity(params) {
+export function prettyDate(params) {
   var uglyDate = params[0];
   console.log(uglyDate);
   var day = parseInt(uglyDate.slice(8, 10));
@@ -31,4 +31,4 @@ export function cityPopularity(params) {
   return prettyDate;
 }
 
-export default Ember.Helper.helper(cityPopularity);
+export default Ember.Helper.helper(prettyDate);

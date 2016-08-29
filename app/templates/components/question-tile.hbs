@@ -5,9 +5,9 @@
     </div>
   {{/link-to}}
   <div class="qListMiddle">
-    <span class="qListTimestamp">{{question.timestamp}}</span>
+    <span class="qListTimestamp">{{brief-date question.timestamp}}</span>
     <span class="qListAskedBy">asked by <span class="qListUser">{{question.user.username}}</span>
-      {{#if loggedInUserMatch}}<button {{action "edit" question}}>Edit</button><button {{action "delete" question}}>Delete</button>{{/if}}
+      {{#if loggedInUserMatch}}<span class="deleteButton" {{action "deleteQuestion" question}}>Delete</span>{{/if}}
     </span>
   </div>
   <div class="qListLower">

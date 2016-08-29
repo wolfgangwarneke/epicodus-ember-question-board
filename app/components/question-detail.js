@@ -13,4 +13,9 @@ export default Ember.Component.extend({
       return false;
     }
   }),
+  actions: {
+    deleteQuestion(question) {
+      this.sendAction('deleteQuestion', question);
+    }
+  }
 });

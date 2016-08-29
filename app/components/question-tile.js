@@ -24,6 +24,9 @@ export default Ember.Component.extend({
   actions: {
     testLog(username) {
       console.log(username);
+    },
+    deleteQuestion(question) {
+      this.sendAction('deleteQuestion', question);
     }
   }
 });
