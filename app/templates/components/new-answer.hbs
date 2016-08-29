@@ -1,0 +1,6 @@
+{{#if logIn.loggedIn}}
+  {{input value=answer}}
+  <button {{action 'answerQuestion'}}>Submit answer</button>
+{{else}}
+  You are not logged in.
+{{/if}}

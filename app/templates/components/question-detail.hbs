@@ -5,6 +5,11 @@
   <div>
     <span>{{question.timestamp}}</span>
     <span>{{question.user.username}}</span>
+    {{#if logIn.loggedIn}}
+      {{#link-to 'answer' question.id}}
+        <span class="answerButton">Answer this!</span>
+      {{/link-to}}
+    {{/if}}
     {{#if loggedInUserMatch}}
       edit and delete
     {{/if}}
@@ -12,4 +17,7 @@
   <div>
     {{question.content}}
   </div>
+  {{#each question.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
 </div>

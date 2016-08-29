@@ -16,6 +16,7 @@ Router.map(function() {
   this.route('ask');
   this.route('questions');
   this.route('question', {path: '/question/:question_id'});
+  this.route('answer', {path: '/answer/:question_id'});
 });
 
 export default Router;

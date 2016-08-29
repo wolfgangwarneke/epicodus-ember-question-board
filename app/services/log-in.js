@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
+  testTruth: true,
   loggedIn: false,
   loggedInUser: null,
   login(user){
